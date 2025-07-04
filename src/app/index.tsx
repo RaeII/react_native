@@ -1,10 +1,15 @@
+import { useState } from "react";
 import { View, Text, StyleSheet, Button, Alert } from "react-native";
 
 export default function Index(){
 
+    const [count, setCount] = useState(0);
+
     const handleMessage = () => {
-        console.log("Dale");
-        Alert.alert("Dale");
+        setCount(count + 1);
+        
+        console.log(count);
+        Alert.alert("Dale " + count);
     }
 
 
